@@ -26,14 +26,14 @@ let luckyNumber = Int(number) ?? 0
 var songIndex: Int = 0
 switch mood.lowercased() {
   case "happy":
-    if luckyNumber <= happySongs.count {
+    if luckyNumber < happySongs.count {
       songIndex = luckyNumber
     } else {
       songIndex = Int.random(in: 0..<happySongs.count)
     }
     print("Because you're in happy mood, we recommend you to hear \(happySongs[songIndex])")
   case "sad":
-    if luckyNumber <= sadSongs.count {
+    if luckyNumber < sadSongs.count {
       songIndex = luckyNumber
     } else {
       songIndex = Int.random(in: 0..<sadSongs.count)
